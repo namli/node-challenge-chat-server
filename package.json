@@ -6,12 +6,25 @@
   "version": "0.0.1",
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
+  "nodemonConfig": {
+    "ext": "js",
+    "ignore": [
+      "*.json",
+      "db/*"
+    ],
+    "delay": "2"
+  },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "nodemon": "nodemon"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
-    "cors": "^2.8.5"
+    "lowdb": "^1.0.0",
+    "nodemon": "^2.0.6",
+    "shortid": "^2.2.16"
   },
   "engines": {
     "node": "8.x"
